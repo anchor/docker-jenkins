@@ -13,7 +13,7 @@ RUN sed -i -Ee 's/^(%sudo.*)ALL$/\1 NOPASSWD:ALL/' /etc/sudoers
 RUN adduser --quiet jenkins && adduser jenkins sudo
 RUN echo "jenkins:jenkins" | chpasswd
 
-ADD public-key /home/jenkins/.ssh/authorized_keys
+ADD ../jenkins-public-key /home/jenkins/.ssh/authorized_keys
 RUN chown -R jenkins:jenkins /home/jenkins/.ssh/ && chmod 0700 /home/jenkins/.ssh && chmod 0644 /home/jenkins/.ssh/authorized_keys
 
 EXPOSE 22
