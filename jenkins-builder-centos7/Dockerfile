@@ -15,7 +15,7 @@ RUN yum -y install git
 RUN sed -i -e '/^Defaults.*requiretty$/d' -e '/^%wheel/d' -e 's/^#\s*\(%wheel.*NOPASSWD\)/\1/' /etc/sudoers 
 RUN adduser jenkins -G wheel
 
-ADD ../jenkins-public-key /home/jenkins/.ssh/authorized_keys
+ADD public-key /home/jenkins/.ssh/authorized_keys
 RUN chown -R jenkins:jenkins /home/jenkins/.ssh/ && chmod 0700 /home/jenkins/.ssh && chmod 0644 /home/jenkins/.ssh/authorized_keys
 
 EXPOSE 22
