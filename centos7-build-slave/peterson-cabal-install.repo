@@ -1,0 +1,6 @@
+[petersen-cabal-install]
+name=Copr repo for cabal-install owned by petersen 
+baseurl=http://copr-be.cloud.fedoraproject.org/results/petersen/cabal-install/epel-7-$basearch/
+skip_if_unavailable=True
+gpgcheck=0
+enabled=1
