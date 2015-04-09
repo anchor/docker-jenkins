@@ -1,11 +1,11 @@
-FROM debian:wheezy
+FROM debian:jessie
 
 RUN apt-get update
 RUN apt-get install -y vim wget zlib1g-dev libgmp-dev git openssh-client openssh-server sudo tar libssl-dev
 
 RUN wget http://packages.engineroom.anchor.net.au/ANCHOR-GPG-KEY
 RUN apt-key add ANCHOR-GPG-KEY
-RUN echo 'deb [ arch=amd64 ] http://packages.engineroom.anchor.net.au/feature/ghc/debian wheezy ghc' | sudo tee -a /etc/apt/sources.list.d/feature-ghc.list
+RUN echo 'deb [ arch=amd64 ] http://packages.engineroom.anchor.net.au/feature/ghc/debian jessie ghc' | sudo tee -a /etc/apt/sources.list.d/feature-ghc.list
 
 RUN mkdir -p /var/run/sshd
 
