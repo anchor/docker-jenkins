@@ -12,7 +12,6 @@ RUN mkdir -p /var/run/sshd
 RUN apt-get update
 RUN apt-get install -y ghc-7.8.4 cabal-install-1.22 build-essential dpkg dpkg-dev
 
-
 RUN apt-get install -y --no-install-recommends openjdk-7-jdk
 
 RUN adduser --quiet jenkins
@@ -30,6 +29,10 @@ RUN ln -s /opt/cabal/1.22/bin/cabal
 
 RUN cabal update
 
+RUN apt-get install -y rsync debhelper
+RUN apt-get install -y nodejs npm
+RUN apt-get install -y advancecomp jpegoptim optipng
+RUN apt-get install -y ruby-sass
 
 RUN sed -i -e '/^Defaults.*requiretty$/d' -e '/^%sudo/d' /etc/sudoers
 RUN echo "%sudo ALL=(ALL) NOPASSWD : ALL" > /etc/sudoers.d/sudogroup
