@@ -10,7 +10,7 @@ RUN echo 'deb [ arch=amd64 ] http://packages.engineroom.anchor.net.au/feature/gh
 RUN mkdir -p /var/run/sshd
 
 RUN apt-get update
-RUN apt-get install -y ghc-7.8.4 cabal-install-1.22 build-essential dpkg dpkg-dev debchange
+RUN apt-get install -y ghc-7.8.4 cabal-install-1.22 build-essential dpkg dpkg-dev devscripts
 RUN apt-get install -y --no-install-recommends openjdk-7-jdk
 RUN apt-get install -y python-stdeb # For building fleet
 
