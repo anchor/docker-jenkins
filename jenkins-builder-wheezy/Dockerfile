@@ -8,8 +8,7 @@ RUN apt-get install -y \
     git \
     jpegoptim \
     libssl-dev \
-    nodejs \
-    npm \
+    m4 \
     openssh-client \
     openssh-server \
     optipng \

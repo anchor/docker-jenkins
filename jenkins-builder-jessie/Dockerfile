@@ -8,6 +8,7 @@ RUN apt-get install -y \
     git \
     jpegoptim \
     libssl-dev \
+    m4 \
     nodejs \
     npm \
     openssh-client \

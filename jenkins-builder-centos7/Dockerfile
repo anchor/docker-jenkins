@@ -4,6 +4,7 @@ RUN yum -y update
 RUN yum -y install \
     git \
     java-1.7.0-openjdk \
+    m4 \
     openssh-clients \
     openssh-server \
     rpm-build \
