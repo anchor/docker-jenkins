@@ -1,6 +1,0 @@
-[petersen-ghc-7.8]
-name=Copr repo for ghc-7.8 owned by petersen 
-baseurl=http://copr-be.cloud.fedoraproject.org/results/petersen/ghc-7.8/epel-7-$basearch/
-skip_if_unavailable=True
-gpgcheck=0
-enabled=1
